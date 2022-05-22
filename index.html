@@ -23,7 +23,7 @@
 		<h1 class="header-title">Блог о творчестве, спорте, и образе жизни</h1>
 	</header>
   <div class="popup" id="popup">
-    <button class="popup__close" type="button" onclick="hide()"><span class="popup__close_text">Закрыть окно</span></button>
+      <button class="popup__close" type="button" onclick="hide()"><span class="popup__close_text">Закрыть окно</span></button>
     <div class="popup__container">
       <div class="feedback__container">
         <header class="feedback-header">
@@ -233,29 +233,6 @@
     				</div>
     			</div>
   			</article>
-  			<article class="post-list">
-				<img class="img-post" src="images/last-post4.jpg" alt="Место для картинки поста">
-    			<div class="post-content">
-    				<header class="post-header">
-    					<ul class="category">
-    						<li class="item-category">
-    							<a class="link-post-category" href="#0">lifestyle</a>
-    						</li>
-    						<li class="item-category">
-    							<a class="link-post-category" href="#0">food</a>
-    						</li>
-    					</ul>
-    					<h3 class="title-post">
-    						<a class="link-post" href="#0">Наукоемкий подход к кулинарии</a>
-    					</h3>
-      					<time class="post-date" datetime="2019-07-10">10 июня 2019</time>
-      					<cite class="post-author">Неизвестный автор</cite>
-    				</header>
-    				<div class="post-text">
-    					<p>Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскрываем физику, химию и микробиологию еды.</p>
-    				</div>
-    			</div>
-  			</article>
 		</main>
 		<aside class="aside">
 			<section class="new-post">
@@ -383,7 +360,10 @@
     <h2 class="header-shop">Наши изделия</h2>
     <div class="collection-shop">
       <article class="card-shop">
-        <img class="img-shop" src="images/shop-item-desk1.jpg">
+        <picture>
+          <source media="(max-width: 640px)" srcset="images/shop-item-mobile1.jpg">
+          <img class="img-shop" src="images/shop-item-desk1.jpg">
+        </picture>
         <div class="frame">
           <div class="header-card-shop">
             <h5 class="title-card-shop">Подушка на диван</h5>
@@ -407,7 +387,10 @@
         </div>
       </article>
       <article class="card-shop">
-        <img class="img-shop" src="images/shop-item-desk2.jpg">
+        <picture>
+          <source media="(max-width: 640px)" srcset="images/shop-item-mobile2.jpg">
+          <img class="img-shop" src="images/shop-item-desk2.jpg">
+        </picture>
         <div class="frame">
           <div class="header-card-shop">
             <h5 class="title-card-shop">Кукла зайчик</h5>
@@ -431,7 +414,10 @@
         </div>
       </article>
       <article class="card-shop">
-        <img class="img-shop" src="images/shop-item-desk3.jpg">
+        <picture>
+          <source media="(max-width: 640px)" srcset="images/shop-item-mobile3.jpg">
+          <img class="img-shop" src="images/shop-item-desk3.jpg">
+        </picture>
         <div class="frame">
           <div class="header-card-shop">
             <h5 class="title-card-shop">Шестиугольная рамка</h5>
