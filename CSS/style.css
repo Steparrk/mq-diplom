@@ -885,7 +885,21 @@ li {
 	color: #999999;
 }
 
+@media (orientation : landscape) {
+	.popup {
+		height: 100%;
+		overflow: auto;
+		width: 80%;
+		height: 90%;
+	}
+}
 @media (min-width: 641px) and (max-width: 1200px) {
+	.popup {
+		height: 100%;
+		overflow: auto;
+		width: 80%;
+		height: 90%;
+	}
 	.header {
 		background-image: url(../images/banner-bg-tablet.jpg);
 	}
@@ -953,7 +967,10 @@ li {
 		width: 100%;
 	}
 	.popup {
-		width: 70%;
+		height: 100%;
+		overflow: auto;
+		width: 80%;
+		height: 90%;
 	}
 	.header {
 		background-image: url(../images/banner-mobile.jpg);
