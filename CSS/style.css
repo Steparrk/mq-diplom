@@ -18,6 +18,7 @@
 	box-sizing: border-box;
 }
 body {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 
@@ -31,35 +32,35 @@ a {
 li {
 	list-style-type: none;
 }
-.dark__theme::after{
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 250em;
-	background-color: black;
-	z-index: 9;
-	opacity: 0.7;
-}
 .popup {
 	position: fixed;
-	margin: 5% auto; /* Will not center vertically and won't work in IE6/7. */
 	left: 0;
-	right: 0;
+	top: 0;
+
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	background: rgba(000, 0, 0, 0.5);
+
+	z-index: 9;
+}
+.popup-conteiner {
+	margin: 5% auto;
+	padding: 0 5%;
+	box-sizing: border-box;
 
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	box-sizing: border-box;
-	width: 25%;
-	max-height: 80%;
-
-	z-index: 9;
+	width: 40%;
+	max-height: 90%;
 }
-.popup__container {
+.popup__questionnaire {
 	background-color: #fff;
-
+	width: 100%;
+	height: 100%;
+	overflow: auto;
 }
 .popup__close {
 	background-color: rgba(0,0,0,0);
@@ -90,6 +91,9 @@ li {
 .feedback__container {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+
+	background-color: #fff;
 
 	padding: 6% 4%;
 }
@@ -871,6 +875,9 @@ li {
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
+  top: 49px;
+  left: 49px;
+  z-index: 1;
 }
 
 .copyright {
@@ -885,18 +892,8 @@ li {
 	color: #999999;
 }
 
-@media (orientation : landscape) {
-	.popup {
-		height: 100%;
-		overflow: auto;
-		width: 80%;
-		height: 90%;
-	}
-}
 @media (min-width: 641px) and (max-width: 1200px) {
-	.popup {
-		height: 100%;
-		overflow: auto;
+	.popup-conteiner {
 		width: 80%;
 		height: 90%;
 	}
@@ -949,6 +946,15 @@ li {
 		margin-top: 50px;
 		width: 35%;
 	}
+	.search {
+		width: 100%;
+	}
+	.search-group {
+		width: 86%;
+	}
+	.search-button {
+		width: 14%;
+	}
 	.shop {
 		width: 100%;
 	}
@@ -962,15 +968,9 @@ li {
 }
 
 @media (max-width: 640px) {
-	.dark__theme::after{
-		height: 510em;
+	.popup-conteiner {
 		width: 100%;
-	}
-	.popup {
-		height: 100%;
-		overflow: auto;
-		width: 80%;
-		height: 90%;
+		height: 55%;
 	}
 	.header {
 		background-image: url(../images/banner-mobile.jpg);

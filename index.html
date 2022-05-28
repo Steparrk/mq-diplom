@@ -7,7 +7,6 @@
 	<title>Document</title>
 </head>
 <body>
-<div class="dark__theme" id="dark"></div>
 	<header class="header">
 		<div class="flexbox-up">
 			<a href="#0" class="logo"></a>
@@ -24,50 +23,52 @@
 		<h1 class="header-title">Блог о творчестве, спорте, и образе жизни</h1>
 	</header>
   <div class="popup" id="popup">
+    <div class="popup-conteiner">
       <button class="popup__close" type="button" onclick="hide()"><span class="popup__close_text">Закрыть окно</span></button>
-    <div class="popup__container">
-      <div class="feedback__container">
-        <header class="feedback-header">
-          <h2 class="feedback-title">Ваш фидбек</h2>
-        </header>
-        <div class="feedback__content">
-          <form class="feedback__form" name="feedback">
-            <div class="frequency__of__visits">
-              <label class="feedback__label">
-                <span class="feedack__questions">Как часто вы заходите на сайт?</span>
-                <select class="select">
-                  <option value="every__day" selected>Почти каждый день</option>
-                  <option value="every__week">Еженедельно</option>
-                  <option value="every__month">Ежемесячно</option>
-                  <option value="beginner">Я тут новичок</option>
-                </select>
-              </label>
-            </div>
-            <div class="feedback__email">
-              <label class="feedback__label">
-                <span class="feedack__questions">Вы подписаны на email рассылку?</span>
-                <div class="radio__conteiner">
-                  <label>
-                    <input class="radiobox" type="radio" name="feedback__email" checked="">
-                      <span class="radiobox-text">Да</span>
-                  </label>
-                  <label>
-                    <input class="radiobox" type="radio" name="feedback__email">
-                      <span class="radiobox-text">Нет</span>
-                  </label>
-                </div>
-              </label>
-            </div>
-            <div class="feedback__text">
-              <label class="feedback__label">
-                <span class="feedack__questions">Расскажите какой контент вы бы хотели видеть на нашем сайте?</span>
-                <textarea class="feedback__textarea" name="feedback" id="" cols="30" rows="10" placeholder="Может, больше рецептов?"></textarea>
-              </label>
-            </div>
-            <div class="feedback__button">
-              <button class="email-button" type="submit">Отправить</button>
-            </div>
-          </form>
+      <div class="popup__questionnaire">
+        <div class="feedback__container">
+          <header class="feedback-header">
+            <h2 class="feedback-title">Ваш фидбек</h2>
+          </header>
+          <div class="feedback__content">
+            <form class="feedback__form" name="feedback">
+              <div class="frequency__of__visits">
+                <label class="feedback__label">
+                  <span class="feedack__questions">Как часто вы заходите на сайт?</span>
+                  <select class="select">
+                    <option value="every__day" selected>Почти каждый день</option>
+                    <option value="every__week">Еженедельно</option>
+                    <option value="every__month">Ежемесячно</option>
+                    <option value="beginner">Я тут новичок</option>
+                  </select>
+                </label>
+              </div>
+              <div class="feedback__email">
+                <label class="feedback__label">
+                  <span class="feedack__questions">Вы подписаны на email рассылку?</span>
+                  <div class="radio__conteiner">
+                    <label>
+                      <input class="radiobox" type="radio" name="feedback__email" checked="">
+                        <span class="radiobox-text">Да</span>
+                    </label>
+                    <label>
+                      <input class="radiobox" type="radio" name="feedback__email">
+                        <span class="radiobox-text">Нет</span>
+                    </label>
+                  </div>
+                </label>
+              </div>
+              <div class="feedback__text">
+                <label class="feedback__label">
+                  <span class="feedack__questions">Расскажите какой контент вы бы хотели видеть на нашем сайте?</span>
+                  <textarea class="feedback__textarea" name="feedback" id="" cols="30" rows="10" placeholder="Может, больше рецептов?"></textarea>
+                </label>
+              </div>
+              <div class="feedback__button">
+                <button class="email-button" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -284,6 +285,7 @@
     				</div>
     			</article>
   		</section>
+      <section class="search-section">
         <form class="search" action="URL">
     			<label class="search-group">
     				<span class="visually-hidden">Поле поиска</span>
@@ -293,68 +295,69 @@
     				<span class="visually-hidden">Кнопка поиска</span>
     			</button>
   			</form>
-        <section class="mailing">
+      </section>
+      <section class="mailing">
           <h2 class="title-aside mailing-title-aside">Рассылка</h2>
-    			<form class="post-email" action="URL">
+          <form class="post-email" action="URL">
             <label class="input-email">
               <span class="visually-hidden">Поле ввода электронной почты</span>
-      				<input class="field" type="email" name="mail" placeholder="Ваш email-адрес" required>
+              <input class="field" type="email" name="mail" placeholder="Ваш email-адрес" required>
             </label>
-    				<button class="email-button" type="submit">Подписаться</button>
-    			</form>
+            <button class="email-button" type="submit">Подписаться</button>
+          </form>
         </section>
-  			<section class="tags">
-  				<h2 class="title-aside tags-title-aside">Теги</h2>
-  				<ul class="list-tags">
-  					<li class="item-tags">
-  						<a class="link-tags" type="button" href="#0">fashion</a>
-  					</li>
-  					<li class="item-tags">
-  						<a class="link-tags" type="button" href="#0">music</a>
-  					</li>
-  					<li class="item-tags">
-  						<a class="link-tags" type="button" href="#0">lifestyle</a>
-  					</li>
-  					<li class="item-tags">
-  						<a class="link-tags" type="button" href="#0">art</a>
-  					</li>
-  					<li class="item-tags">
-  						<a class="link-tags" type="button" href="#0">interior</a>
-  					</li>
-  					<li class="item-tags">
-  						<a class="link-tags" type="button" href="#0">travel</a>
-  					</li>
-  					<li class="item-tags">
-  						<a class="link-tags" type="button" href="#0">food</a>
-  					</li>
-  					<li class="item-tags">
-  						<a class="link-tags" type="button" href="#0">health</a>
-  					</li>
-  				</ul>
-  			</section>
-  			<section class="themes">
-  				<h2 class="title-aside themes-title-aside">Темы</h2>
-  				<ul class="list-themes">
-  					<li class="item-themes">
-  						<a class="link-themes" href="#0">Красота<span class="index-themes">12</span></a>
-  					</li>
-  					<li class="item-themes">
-  						<a class="link-themes" href="#0">Здоровье<span class="index-themes">4</span></a>
-  					</li>
-  					<li class="item-themes">
-  						<a class="link-themes" href="#0">Образ жизни<span class="index-themes">145</span></a>
-  					</li>
-  					<li class="item-themes">
-  						<a class="link-themes" href="#0">Музыка<span class="index-themes">28</span></a>
-  					</li>
-  					<li class="item-themes">
-  						<a class="link-themes" href="#0">Спорт<span class="index-themes">62</span></a>
-  					</li>
-  					<li class="item-themes">
-  						<a class="link-themes" href="#0">Йога<span class="index-themes">8</span></a>
-  					</li>
-  				</ul>
-  			</section>
+        <section class="tags">
+          <h2 class="title-aside tags-title-aside">Теги</h2>
+          <ul class="list-tags">
+            <li class="item-tags">
+              <a class="link-tags" type="button" href="#0">fashion</a>
+            </li>
+            <li class="item-tags">
+              <a class="link-tags" type="button" href="#0">music</a>
+            </li>
+            <li class="item-tags">
+              <a class="link-tags" type="button" href="#0">lifestyle</a>
+            </li>
+            <li class="item-tags">
+              <a class="link-tags" type="button" href="#0">art</a>
+            </li>
+            <li class="item-tags">
+              <a class="link-tags" type="button" href="#0">interior</a>
+            </li>
+            <li class="item-tags">
+              <a class="link-tags" type="button" href="#0">travel</a>
+            </li>
+            <li class="item-tags">
+              <a class="link-tags" type="button" href="#0">food</a>
+            </li>
+            <li class="item-tags">
+              <a class="link-tags" type="button" href="#0">health</a>
+            </li>
+          </ul>
+        </section>
+        <section class="themes">
+          <h2 class="title-aside themes-title-aside">Темы</h2>
+          <ul class="list-themes">
+            <li class="item-themes">
+              <a class="link-themes" href="#0">Красота<span class="index-themes">12</span></a>
+            </li>
+            <li class="item-themes">
+              <a class="link-themes" href="#0">Здоровье<span class="index-themes">4</span></a>
+            </li>
+            <li class="item-themes">
+              <a class="link-themes" href="#0">Образ жизни<span class="index-themes">145</span></a>
+            </li>
+            <li class="item-themes">
+              <a class="link-themes" href="#0">Музыка<span class="index-themes">28</span></a>
+            </li>
+            <li class="item-themes">
+              <a class="link-themes" href="#0">Спорт<span class="index-themes">62</span></a>
+            </li>
+            <li class="item-themes">
+              <a class="link-themes" href="#0">Йога<span class="index-themes">8</span></a>
+            </li>
+          </ul>
+        </section>
 		</aside>
 	</div>
   <section class="shop">
